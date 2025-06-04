@@ -19,6 +19,8 @@ class Game:
         while self.player.health > 0 and self.opponent.health > 0:
             self.turn += 1
             print(f"\n-- Turn {self.turn} --")
+            print(f"{self.player.name} (Health: {self.player.health}, Mana: {self.player.mana})")
+            print(f"{self.opponent.name} (Health: {self.opponent.health}, Mana: {self.opponent.mana})")
             self.player.start_turn()
             self.player_turn()
             if self.opponent.health <= 0:
